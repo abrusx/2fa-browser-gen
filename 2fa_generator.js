@@ -144,6 +144,8 @@ async function generateTOTP() {
 
     document.getElementById("code-value").textContent = code;
     document.getElementById("result").style.display = "flex";
+    document.getElementById("copy-url-container").style.display = "flex";
+    document.getElementById("timer").style.display = "block";
 
     // Update timer
     updateTimer();
@@ -177,7 +179,8 @@ window.onload = function () {
   if (urlKey) {
     document.getElementById("secretKey").value = urlKey;
     document.getElementById("result").style.display = "flex";
-    document.getElementById("share-link").style.display = "block";
+    document.getElementById("copy-url-container").style.display = "flex";
+    document.getElementById("timer").style.display = "block";
     updateShareLink(urlKey);
   }
   generateTOTP();
